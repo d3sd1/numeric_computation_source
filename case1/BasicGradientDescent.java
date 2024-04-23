@@ -1,3 +1,5 @@
+package case1;
+
 public class BasicGradientDescent {
 
     // Learning rate determines the size of the steps we take

@@ -1,3 +1,5 @@
+package case1;
+
 public class Comparison {
 
     private static void garbageCollect() {
