@@ -1,0 +1,41 @@
+
+Generation 0:
+Best x = 0.616454,
+Best y = 0.392021,
+Fitness = 0.161519
+Generation 100:
+Best x = 0.998323,
+Best y = 0.996738,
+Fitness = 0.000004
+Generation 200:
+Best x = 0.998323,
+Best y = 0.996738,
+Fitness = 0.000004
+Generation 300:
+Best x = 0.998323,
+Best y = 0.996738,
+Fitness = 0.000004
+Generation 400:
+Best x = 0.998323,
+Best y = 0.996738,
+Fitness = 0.000004
+Generation 500:
+Best x = 0.998323,
+Best y = 0.996738,
+Fitness = 0.000004
+Generation 600:
+Best x = 1.001156,
+Best y = 1.002190,
+Fitness = 0.000003
+Generation 700:
+Best x = 1.001156,
+Best y = 1.002190,
+Fitness = 0.000003
+Generation 800:
+Best x = 1.001156,
+Best y = 1.002190,
+Fitness = 0.000003
+Generation 900:
+Best x = 1.001156,
+Best y = 1.002190,
+Fitness = 0.000003
