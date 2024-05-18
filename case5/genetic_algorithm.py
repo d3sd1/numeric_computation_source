@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import random
+import time
+import tracemalloc
 
 # Coordinates for Madrid and London
 madrid = np.array([40.4168, -3.7038])
@@ -52,8 +54,15 @@ def genetic_algorithm(start, end, pop_size, generations):
         best_route = sorted(population, key=lambda x: route_distance(x))[0]
     return best_route
 
-# Run Genetic Algorithm
+# Measure time and memory usage for Genetic Algorithm
+tracemalloc.start()
+start_time = time.time()
+
 best_route = genetic_algorithm(madrid, london, population_size, generations)
+
+ga_time = time.time() - start_time
+ga_memory = tracemalloc.get_traced_memory()[1] - tracemalloc.get_traced_memory()[0]
+tracemalloc.stop()
 
 # Plotting the convergence
 population = initial_population(population_size)
@@ -65,13 +74,5 @@ plt.title('Convergence of Genetic Algorithm')
 plt.savefig('convergence_ga.png')
 plt.show()
 
-# Plotting the final routes
-plt.figure()
-plt.plot([madrid[0], london[0]], [madrid[1], london[1]], 'ro-', label='Gradient Descent')
-plt.plot([madrid[0], best_route[0]], [madrid[1], best_route[1]], 'bo-', label='Genetic Algorithm')
-plt.xlabel('Latitude')
-plt.ylabel('Longitude')
-plt.legend()
-plt.title('Final Routes Found by GD and GA')
-plt.savefig('final_routes.png')
-plt.show()
+print(f"Genetic Algorithm Time: {ga_time} seconds")
+print(f"Genetic Algorithm Memory: {ga_memory / 1024} KB")
